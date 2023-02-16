@@ -6,7 +6,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
 export function ProfileCard() {
   return (
-    <div className="bg-base-profile w-full flex rounded-[10px] max-w-[864px] px-8 py-10 top-52">
+    <div className="absolute bg-base-profile w-full flex rounded-[10px] max-w-[864px] shadow-[0_2px_28px_rgba(0, 0, 0 ,0.2)] py-8 px-10 top-60">
       <Avatar.Root className="mr-8 w-[148px] h-[148px]">
         <Avatar.Image
           src="https://github.com/mateuso12.png"
