@@ -1,3 +1,9 @@
 @tailwind base;
 @tailwind utilities;
 @tailwind components;
+
+@layer apply {
+  *{
+    line-height: 160%;
+  }
+}
