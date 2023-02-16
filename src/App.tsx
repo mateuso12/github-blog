@@ -1,5 +1,12 @@
-function App() {
-  return <h1>Hello world</h1>
-}
+import { Header } from './components/Header'
+import { ProfileCard } from './components/ProfileCard'
+import './styles/global.css'
 
-export default App
+export function App() {
+  return (
+    <div className="w-screen h-screen flex flex-col items-center">
+      <Header />
+      <ProfileCard />
+    </div>
+  )
+}
