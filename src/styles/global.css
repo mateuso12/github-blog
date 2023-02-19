@@ -6,4 +6,26 @@
   *{
     line-height: 160%;
   }
+  /* estiliza todas as barras de rolagem da página */
+*::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* estiliza o fundo da barra de rolagem */
+*::-webkit-scrollbar-track {
+  background: theme(colors.base-border);
+  border-radius: 6px;
+}
+
+/* estiliza o indicador da posição atual na barra de rolagem */
+*::-webkit-scrollbar-thumb {
+  background: theme(colors.base-span);
+  border-radius: 6px;
+}
+
+/* estiliza o indicador da posição atual na barra de rolagem quando o cursor está em cima */
+*::-webkit-scrollbar-thumb:hover {
+  background: theme(colors.base-text);
+}
+
 }

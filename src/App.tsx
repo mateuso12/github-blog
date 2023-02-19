@@ -5,7 +5,7 @@ import './styles/global.css'
 
 export function App() {
   return (
-    <div className="w-screen h-screen flex flex-col items-center">
+    <div className="w-screen h-screen flex flex-col items-center overflow-hidden">
       <Header />
       <ProfileCard />
       <PostsArea />
