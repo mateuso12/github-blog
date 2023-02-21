@@ -5,6 +5,7 @@
 @layer apply {
   *{
     line-height: 160%;
+    font-family: 'Nunito', sans-serif;
   }
   /* estiliza todas as barras de rolagem da página */
 *::-webkit-scrollbar {
