@@ -1,12 +1,11 @@
-import { Header } from './components/Header'
-import { ProfileCard } from './components/ProfileCard'
+import { BrowserRouter } from 'react-router-dom'
+import { Router } from './Router'
 import './styles/global.css'
 
 export function App() {
   return (
-    <div className="w-screen h-screen flex flex-col items-center">
-      <Header />
-      <ProfileCard />
-    </div>
+    <BrowserRouter>
+      <Router />
+    </BrowserRouter>
   )
 }
