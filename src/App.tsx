@@ -1,5 +1,6 @@
 import { BrowserRouter } from 'react-router-dom'
 import { Router } from './Router'
+import './services/dayjs'
 import './styles/global.css'
 
 export function App() {
