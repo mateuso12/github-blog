@@ -25,7 +25,6 @@ interface ProfileCardProps {
 
 export function ProfileCard() {
   const [user, setUser] = useState<ProfileCardProps>()
-  console.log('user: ', user)
 
   useEffect(() => {
     userApi.get('').then((response) => {
