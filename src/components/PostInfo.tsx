@@ -33,7 +33,37 @@ export function PostInfo({
   const createdDate = dayjs(createdAt).fromNow()
 
   return (
-    <div className="md:relative lg:relative flex-wrap justify-center md:flex-col bg-base-profile md:w-full lg:w-full flex rounded-[10px] lg:max-w-[864px] shadow-xl mx-4 mt-2 py-5 px-7 md:py-8 md:px-10 md:bottom-20">
+    <div
+      className="
+  md:relative
+  lg:relative
+bg-base-profile
+  flex
+  rounded-[10px]
+  shadow-xl
+  md:flex-col
+  flex-wrap
+  justify-center
+  mx-3
+  py-5
+  px-6
+  mt-4
+  md:mt-6
+  lg:mt-0
+  gap-3
+  md:flex-nowrap
+  md:mx-3
+  md:py-6
+  md:px-10
+  md:gap-0
+  md:bottom-16
+  lg:w-full
+  lg:gap-0
+  lg:py-8
+  lg:px-10
+  lg:max-w-4xl
+  lg:bottom-20"
+    >
       <div className="flex justify-between w-full">
         <Link
           to="/"
