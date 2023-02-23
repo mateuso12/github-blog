@@ -61,7 +61,7 @@ export function PostsArea() {
                       {createdDate}
                     </span>
                   </div>
-                  <div className="md:line-clamp-3 lg:line-clamp-4 line-clamp-2">
+                  <div className="md:line-clamp-3 lg:line-clamp-4 line-clamp-3">
                     <ReactMarkdown className="text-base text-base-text text-justify">
                       {post?.body}
                     </ReactMarkdown>
