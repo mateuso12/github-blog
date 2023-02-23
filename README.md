@@ -5,7 +5,7 @@
   </a>
 </p>
 
-### 🏠 [Homepage](O GitHub Blog foi uma oportunidade incrível para aprimorar minhas habilidades em desenvolvimento front-end e trabalhar com ferramentas e tecnologias modernas. Foi muito divertido aprender a integrar a API do GitHub, lidar com rotas e navegação, e criar uma interface de usuário moderna e elegante com TailwindCSS e Styled-Components.)
+  O GitHub Blog foi uma oportunidade incrível para aprimorar minhas habilidades em desenvolvimento front-end e trabalhar com ferramentas e tecnologias modernas. Foi muito divertido aprender a integrar a API do GitHub, lidar com rotas e navegação, e criar uma interface de usuário moderna e elegante com TailwindCSS e Styled-Components.
 
 ### ✨ [Demo](https://github-blog-mu-three.vercel.app/)
 
