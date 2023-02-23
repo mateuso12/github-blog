@@ -4,12 +4,13 @@
 
 @layer apply {
   *{
+    box-sizing: border-box;
     line-height: 160%;
     font-family: 'Nunito', sans-serif;
   }
   /* estiliza todas as barras de rolagem da página */
 *::-webkit-scrollbar {
-  width: 10px;
+  width: 8px;
 }
 
 /* estiliza o fundo da barra de rolagem */
@@ -20,7 +21,7 @@
 
 /* estiliza o indicador da posição atual na barra de rolagem */
 *::-webkit-scrollbar-thumb {
-  background: theme(colors.base-span);
+  background: theme(colors.blue);
   border-radius: 6px;
 }
 

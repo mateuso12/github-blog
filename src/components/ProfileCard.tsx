@@ -11,7 +11,7 @@ import {
 } from '@fortawesome/free-solid-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
-import { userApi } from '../services/api'
+import { api } from '../services/api'
 
 interface ProfileCardProps {
   avatar_url: string
@@ -27,7 +27,7 @@ export function ProfileCard() {
   const [user, setUser] = useState<ProfileCardProps>()
 
   useEffect(() => {
-    userApi.get('').then((response) => {
+    api.get('/users/mateuso12').then((response) => {
       setUser(response.data)
     })
   }, [])
@@ -51,7 +51,7 @@ export function ProfileCard() {
           <Link
             to="https://github.com/mateuso12"
             target="_blank"
-            className="flex uppercase font-bold gap-2 text-xs text-blue"
+            className="flex uppercase font-bold gap-2 text-xs text-blue border-b border-base-profile hover:border-solid hover:border-blue transition-all"
           >
             GITHUB
             <FontAwesomeIcon icon={faArrowUpRightFromSquare} />

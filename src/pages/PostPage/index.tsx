@@ -1,47 +1,63 @@
-import { useEffect, useRef, useState } from 'react'
+import { useCallback, useEffect, useRef, useState } from 'react'
 import { useParams } from 'react-router-dom'
 import { Header } from '../../components/Header'
-import { PostContent } from '../../components/PostContent'
+import { PostContent } from '../../components/PostContent/index'
 import { PostInfo } from '../../components/PostInfo'
-import { issueApi } from '../../services/api'
+
+import { api } from '../../services/api'
+import '../../styles/loading.css'
 
 interface PostContentPageProps {
   body: string
   title: string
   created_at: Date
   comments: number
+  html_url: string
   user: {
     login: string
   }
 }
 
 export function PostPage() {
-  const [postContent, setPostContent] = useState<PostContentPageProps>()
+  const [postContent, setPostContent] = useState<PostContentPageProps>(
+    {} as PostContentPageProps,
+  )
+  const [isLoading, setIsLoading] = useState(true)
+
   const { issueNumber } = useParams<string>()
 
   const issueNumberRef = useRef(issueNumber)
 
-  useEffect(() => {
-    const getContentPost = async () => {
-      if (issueApi) {
-        await issueApi
-          ?.get(`${issueNumberRef.current}`)
-          .then((response) => setPostContent(response.data))
-      }
+  const getPostDetails = useCallback(async () => {
+    try {
+      setIsLoading(true)
+
+      const response = await api.get(
+        `/repos/mateuso12/github-blog-posts/issues/${issueNumberRef.current}`,
+      )
+
+      setPostContent(response.data)
+    } finally {
+      setIsLoading(false)
     }
-    getContentPost()
   }, [])
 
+  useEffect(() => {
+    getPostDetails()
+  }, [getPostDetails])
+
   return (
-    <div className="w-screen h-screen flex flex-col items-center overflow-hidden">
+    <div className="w-screen h-screen flex flex-col items-center overflow-y-auto">
       <Header />
       <PostInfo
-        title={postContent?.title}
-        comments={postContent?.comments}
-        createdAt={postContent?.created_at}
-        userLogin={postContent?.user?.login}
+        title={postContent.title}
+        comments={postContent.comments}
+        createdAt={postContent.created_at}
+        userLogin={postContent.user?.login}
+        url={postContent.html_url}
+        isLoading={isLoading}
       />
-      <PostContent body={postContent?.body} />
+      <PostContent content={postContent.body} />
     </div>
   )
 }
