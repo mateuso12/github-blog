@@ -42,12 +42,12 @@ export function PostsArea() {
   }, [getPosts])
 
   return (
-    <main className=" max-w-[865px] w-full">
+    <main className="max-w-4xl mx-3 my-5 md:my-6 lg:my-0 lg:mx-7 md:mx-4">
       <SearchInput postsLength={posts.length} getPosts={getPosts} />
       {isLoading ? (
         <div className="loader" />
       ) : (
-        <section className="grid grid-cols-2 gap-8 mt-[46px]">
+        <section className="lg:grid lg:grid-cols-2 md:flex md:flex-wrap md:gap-8 flex flex-col gap-6 mt-[46px]">
           {posts?.map((post) => {
             const createdDate = dayjs(post?.created_at).fromNow()
             return (
@@ -61,7 +61,7 @@ export function PostsArea() {
                       {createdDate}
                     </span>
                   </div>
-                  <div className="line-clamp-4">
+                  <div className="md:line-clamp-3 lg:line-clamp-4 line-clamp-2">
                     <ReactMarkdown className="text-base text-base-text text-justify">
                       {post?.body}
                     </ReactMarkdown>

@@ -34,7 +34,7 @@ export function SearchInput({ postsLength, getPosts }: SearchInputProps) {
       <input
         type="text"
         placeholder="Buscar conteúdo"
-        className="w-[864px] h-12 flex items-center px-4 py-3 rounded-md bg-base-input border-base-border border-solid border-2 text-base-text placeholder:text-base-label"
+        className="w-full h-12 flex items-center px-4 py-3 rounded-md bg-base-input border-base-border border-solid border-2 text-base-text placeholder:text-base-label"
         {...register('query')}
       />
     </form>

@@ -47,7 +47,7 @@ export function PostPage() {
   }, [getPostDetails])
 
   return (
-    <div className="w-screen h-screen flex flex-col items-center overflow-y-auto">
+    <div className="lg:w-full md:w-full w-screen flex flex-col items-center overflow-y-auto overflow-x-hidden">
       <Header />
       <PostInfo
         title={postContent.title}

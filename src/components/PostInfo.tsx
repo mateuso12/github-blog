@@ -33,11 +33,11 @@ export function PostInfo({
   const createdDate = dayjs(createdAt).fromNow()
 
   return (
-    <div className="relative flex-col bg-base-profile w-full flex rounded-[10px] max-w-[864px] shadow-xl py-8 px-10 bottom-20">
-      <div className="flex items-center justify-between w-full">
+    <div className="md:relative lg:relative flex-wrap justify-center md:flex-col bg-base-profile md:w-full lg:w-full flex rounded-[10px] lg:max-w-[864px] shadow-xl mx-4 mt-2 py-5 px-7 md:py-8 md:px-10 md:bottom-20">
+      <div className="flex justify-between w-full">
         <Link
           to="/"
-          className="flex uppercase items-center font-bold gap-2 text-xs text-blue mb-5"
+          className="flex uppercase font-bold gap-2 text-xs text-blue mb-5"
         >
           <FaChevronLeft />
           <p>Voltar</p>

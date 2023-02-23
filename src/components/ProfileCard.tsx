@@ -33,7 +33,36 @@ export function ProfileCard() {
   }, [])
 
   return (
-    <div className="relative bg-base-profile w-full flex rounded-[10px] max-w-[864px] shadow-xl py-8 px-10 bottom-20">
+    <div
+      className="
+    md:relative
+    lg:relative
+  bg-base-profile
+    flex
+    rounded-[10px]
+    shadow-xl
+    flex-wrap
+    justify-center
+    mx-3
+    py-5
+    px-6
+    mt-4
+    md:mt-6
+    lg:mt-0
+    gap-3
+    md:flex-nowrap
+    md:mx-4
+    md:py-6
+    md:px-10
+    md:gap-0
+    md:bottom-16
+    lg:w-full
+    lg:gap-0
+    lg:py-8
+    lg:px-10
+    lg:max-w-4xl
+    lg:bottom-20"
+    >
       <Avatar.Root className="mr-8 w-[148px] h-[148px]">
         <Avatar.Image
           src={user?.avatar_url}
@@ -43,7 +72,7 @@ export function ProfileCard() {
         <Avatar.Fallback />
       </Avatar.Root>
 
-      <div className="flex flex-col max-w-[612px]">
+      <div className="flex flex-col">
         <div className="flex justify-between items-center">
           <h1 className="text-base-title font-bold text-2xl mb-2">
             {user?.name}
