@@ -26,7 +26,7 @@ npm run dev
 👤 **Mateus de Sousa Silva Santos**
 
 * Github: [@mateuso12](https://github.com/mateuso12)
-* LinkedIn: [mateusousas](https://linkedin.com/in/https:\/\/www.linkedin.com\/in\/mateusousas\/)
+* LinkedIn: [mateusousas](https://linkedin.com/in/mateusousas/)
 
 ## 🤝 Contributing
 
